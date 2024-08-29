@@ -1,3 +1,5 @@
+
+// Grab user inserted data (values) from forms
 let servingsPer = document.querySelector('#servingsPer');
 let servingSize = document.querySelector('#servingSize');
 let servingCalories = document.querySelector('#servingCalories');
@@ -16,6 +18,7 @@ let calcium = document.querySelector('#calcium');
 let iron = document.querySelector('#iron');
 let potassium = document.querySelector('#potassium');
 
+// Grab user inserted data (percentages) from forms
 let totalFatPercent = document.querySelector('#totalFatPercent');
 let saturatedFatPercent = document.querySelector('#saturatedFatPercent');
 let cholestrolPercent = document.querySelector('#cholestrolPercent');
@@ -27,9 +30,10 @@ let calciumPercent = document.querySelector('#calciumPercent');
 let ironPercent = document.querySelector('#ironPercent');
 let potassiumPercent = document.querySelector('#potassiumPercent');
 
-
+// Submit button
 const buttonSubmit = document.querySelector('#submit');
 
+// Grabbing fields from nutritional label
 let servingsPerText = document.querySelector('#servingsPerText');
 let servingSizeText = document.querySelector('#servingSizeText');
 let servingCaloriesText = document.querySelector('#servingCaloriesText');
@@ -59,9 +63,10 @@ let calciumPercentText = document.querySelector('#calciumPercentText');
 let ironPercentText = document.querySelector('#ironPercentText');
 let potassiumPercentText = document.querySelector('#potassiumPercentText');
 
-
+// Update the nutritional label with click
 buttonSubmit.onclick = updateLabel;
 
+// Set the text on the nutritional label from inserted data
 function updateLabel() {
     servingsPerText.textContent = servingsPer.value;
     servingSizeText.textContent = servingSize.value;
@@ -90,5 +95,4 @@ function updateLabel() {
     calciumPercentText.textContent = calciumPercent.value;
     ironPercentText.textContent = ironPercent.value;
     potassiumPercentText.textContent = potassiumPercent.value;
-
 }
