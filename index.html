@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <title>Nutrition Label</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+  <link href="./styles.css" rel="stylesheet">
+  <script src="scripts.js" defer></script>
+</head>
+
+<body>
+	<div class="flex-container">
+	<div class="form">
+		<form>
+		<div class="row">
+			<label for="servingsPer">Servings per Container:</label>
+<input type="text" id="servingsPer" name="servingsPer" placeholder="ex. 12"><br>
+</div><div class="row"><label for="servingSize">Serving Size:</label>
+<input type="text" id="servingSize" name="servingSize" placeholder="ex. 2/3 cup (55g)"><br>
+</div><div class="row"><label for="servingCalories">Calories per Serving:</label>
+<input type="text" id="servingCalories" name="servingCalories" placeholder="ex. 230"><br>
+</div><div class="row"><label for="totalFat">Total fat:</label>
+<input type="text" id="totalFat" name="totalFat" placeholder="ex. 8g"><br>
+</div><div class="row"><label for="totalFatPercent">Total fat percent:</label></br>
+<input type="text" id="totalFatPercent" name="totalFatPercent" placeholder="10%"><br>
+</div><div class="row"><label for="saturatedFat">Saturated Fat:</label>
+<input type="text" id="saturatedFat" name="saturatedFat" placeholder="ex. 1g"><br>
+</div><div class="row"><label for="saturatedFatPercent">Saturated fat percent:</label></br>
+<input type="text" id="saturatedFatPercent" name="saturatedFatPercent" placeholder="5%"><br>
+</div><div class="row"><label for="transFat">Trans fat:</label>
+<input type="text" id="transFat" name="transFat" placeholder="ex. 0g"><br>
+</div><div class="row"><label for="cholestrol">Cholestrol:</label>
+<input type="text" id="cholestrol" name="cholestrol" placeholder="ex. 0mg"><br>
+</div><div class="row"><label for="cholestrolPercent">Cholestrol percent:</label></br>
+<input type="text" id="cholestrolPercent" name="cholestrolPercent" placeholder="0%"><br>
+</div><div class="row"><label for="sodium">Sodium:</label>
+<input type="text" id="sodium" name="sodium" placeholder="ex. 160mg"><br>
+</div><div class="row"><label for="sodiumPercent">Sodium percent:</label></br>
+<input type="text" id="sodiumPercent" name="sodiumPercent" placeholder="7%"><br>
+</div><div class="row"><label for="totalCarbs">Total Carboyhrdates:</label>
+<input type="text" id="totalCarbs" name="totalCarbs" placeholder="ex. 37g"><br>
+</div><div class="row"><label for="totalCarbsPercent">Total Carbs percent:</label></br>
+<input type="text" id="totalCarbsPercent" name="totalCarbsPercent" placeholder="13%"><br>
+</div><div class="row"><label for="dietaryFiber">Dietary Fiber:</label>
+<input type="text" id="dietaryFiber" name="dietaryFiber" placeholder="ex. 4g"><br>
+</div><div class="row"><label for="totalSugars">Total sugars:</label>
+<input type="text" id="totalSugars" name="totalSugars" placeholder="ex. 12g"><br>
+</div><div class="row"><label for="addedSugars">Included added sugars:</label>
+<input type="text" id="addedSugars" name="addedSugars" placeholder="ex. 10g"><br>
+</div><div class="row"><label for="addedSugarsPercent">Added Sugars percent:</label></br>
+<input type="text" id="addedSugarsPercent" name="addedSugarsPercent"placeholder="20%"><br>
+</div><div class="row"><label for="protein">Protein:</label>
+<input type="text" id="protein" name="protein" placeholder="ex. 3g"><br>
+</div><div class="row"><label for="vitaminD">Vitamin D:</label>
+<input type="text" id="vitaminD" name="vitaminD" placeholder="ex. 2mcg"><br>
+</div><div class="row"><label for="vitaminDPercent">Vitamin D percent:</label></br>
+<input type="text" id="vitaminDPercent" name="vitaminDPercent" placeholder="10%"><br>
+</div><div class="row"><label for="calcium">Calcium:</label>
+<input type="text" id="calcium" name="calcium" placeholder="ex. 260mg"><br>
+</div><div class="row"><label for="calciumPercent">Calcium percent:</label></br>
+<input type="text" id="calciumPercent" name="calciumPercent" placeholder="20%"><br>
+</div><div class="row"><label for="iron">Iron:</label>
+<input type="text" id="iron" name="iron" placeholder="ex. 8mg"><br>
+</div><div class="row"><label for="ironPercent">Iron percent:</label></br>
+<input type="text" id="ironPercent" name="ironPercent" placeholder="45%"><br>
+</div><div class="row"><label for="potassium">Potassium:</label>
+<input type="text" id="potassium" name="potassium" placeholder="ex. 235mg"><br>
+</div><div class="row"><label for="potassiumPercent">Potassium percent:</label></br>
+<input type="text" id="potassiumPercent" name="potassiumPercent" placeholder="6%"><br>
+</div><div class="row"><input type="button" id="submit" value="Submit"></div>
+		</form>
+	</div>
+  <div class="nutLabel">
+    <header>
+      <h1 class="bold">Nutrition Facts</h1>
+      <div class="divider"></div>
+      <p><span><span id="servingsPerText">12</span> servings per container<span></p>
+      <p class="bold">Serving size <span><span id="servingSizeText">2/3 cup (55g)</span></span></p>
+    </header>
+    <div class="divider large"></div>
+    <div class="calories-info">
+      <div class="left-container">
+        <h2 class="bold small-text">Amount per serving</h2>
+        <p>Calories</p>
+      </div>
+      <span id="servingCaloriesText">230</span>
+    </div>
+    <div class="divider medium"></div>
+    <div class="daily-value small-text">
+      <p class="bold right no-divider">% Daily Value *</p>
+      <div class="divider"></div>
+      <p><span><span class="bold">Total Fat</span> <span id="totalFatText">8g</span></span> <span class="bold"><span id="totalFatPercentText">10%</span></span></p>
+      <p class="indent no-divider"><span>Saturated Fat <span id="saturatedFatText">1g</span></span> <span class="bold"><span id="saturatedFatPercentText">5%</span></span></p>
+      <div class="divider"></div>
+      <p class="indent no-divider"><span><i>Trans</i> Fat <span id="transFatText">0g</span></span></p>
+      <div class="divider"></div>
+      <p><span><span class="bold">Cholesterol</span> <span id="cholestrolText">0mg</span></span> <span class="bold"><span id="cholestrolPercentText">0%</span></span></p>
+      <p><span><span class="bold">Sodium</span> <span id="sodiumText">160mg</span></span> <span class="bold"><span id="sodiumPercentText">7%</span></span></p>
+      <p><span><span class="bold">Total Carbohydrate</span> <span id="totalCarbsText">37g</span></span> <span class="bold"><span id="totalCarbsPercentText">13%</span></span></p>
+      <p class="indent no-divider"><span>Dietary Fiber <span id="dietaryFiberText">4g</span></span></p>
+      <div class="divider"></div>
+      <p class="indent no-divider"><span>Total Sugars <span id="totalSugarsText">12g</span></span></p>
+      <div class="divider double-indent"></div>
+      <p class="double-indent no-divider"><span>Includes <span id="addedSugarsText">10g</span> Added Sugars</span> <span class="bold"><span id="addedSugarsPercentText">20%</span></span></p>
+      <div class="divider"></div>
+      <p class="no-divider"><span><span class="bold">Protein</span> <span id="proteinText">3g</span></span></p>
+      <div class="divider large"></div>
+      <p><span>Vitamin D <span id="vitaminDText">2mcg</span></span> <span><span id="vitaminDPercentText">10%<span></span></p>
+      <p><span>Calcium <span id="calciumText">260mg</span></span> <span><span id="calciumPercentText">20%</span></span></p>
+      <p><span>Iron <span id="ironText">8mg</span></span> <span><span id="ironPercentText">45%</span></span></p>
+      <p class="no-divider"><span>Potassium <span id="potassiumText">235mg</span></span> <span><span id="potassiumPercentText">6%</span></span></p>
+    </div>
+    <div class="divider medium"></div>
+    <p class="note">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily
+      diet. 2,000 calories a day is used for general nutrition advice.</p>
+  </div>
+  </div>
+</body>
+</html>
