@@ -96,3 +96,27 @@ function updateLabel() {
     ironPercentText.textContent = ironPercent.value;
     potassiumPercentText.textContent = potassiumPercent.value;
 }
+
+// Download label functionality
+$(document).ready(function() {
+
+
+    var element = $(".nutLabel"); // global variable
+    var getCanvas; // global variable
+    var newData;
+
+    $("#btn-Preview-Image").on('click', function() {
+        html2canvas(element, {
+            onrendered: function(canvas) {
+                getCanvas = canvas;
+                var imgageData = getCanvas.toDataURL("image/png");
+                var a = document.createElement("a");
+                a.href = imgageData; //Image Base64 Goes here
+                a.download = "image.png"; //File name Here
+                a.click(); //Downloaded file
+            }
+        });
+    });
+
+
+});
